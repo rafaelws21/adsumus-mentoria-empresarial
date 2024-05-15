@@ -6,6 +6,7 @@ import { MaterialModule } from '../material/material.module';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { LayoutComponent } from './components/layout/layout.component';
     CommonModule,
     FlexLayoutModule,
     RouterModule,
-    MaterialModule,
+    MatButtonModule,
   ]
 })
 export class SharedModule { }
