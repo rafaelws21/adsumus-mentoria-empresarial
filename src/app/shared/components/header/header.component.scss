@@ -4,13 +4,15 @@ header {
   padding-left: 20px;
   padding-right: 20px;
   color: #12559b;
+  box-shadow: 0 -2px 4px -1px rgb(4 32 85 / 41%), 0 -4px 5px 0 rgb(16 34 75 / 58%), 0 -1px 10px 0 rgb(11 15 155 / 74%);
   img {
-    min-width: 10% !important;
-    max-width: 15% !important;
+    max-width: 20% !important;
   }
   a {
     color: #12559b;
   }
+
+  background-color: white;
 
 
 }
