@@ -9,7 +9,7 @@ export const routes: Routes = [
     component: LayoutComponent,
     loadChildren: () => import('./site/site.module').then(m => m.SiteModule),
   },
-  {path: '', redirectTo: '', pathMatch: 'full'},
+  {path: '', redirectTo: '/', pathMatch: 'full'},
 ];
 
 @NgModule({
