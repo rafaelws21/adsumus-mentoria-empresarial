@@ -1,68 +1,12 @@
-.config-bg {
-  background-image: url("../../../../assets/img/fundo_home.jpg");
-  background-color: #cccccc;
-  height: 400px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: blur(1px);
-  opacity: 0.8;
-  margin-bottom: 10px;
 
+.padding-top-10 {
+  padding-top: 10px;
 }
 
-.bg-text {
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-  color: white;
-  font-weight: bold;
-  border: 3px solid #f1f1f1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 80%;
-  padding: 20px;
-  text-align: center;
-  overflow:hidden;
-  white-space:nowrap;
-
-  .title-1:first-of-type {
-    animation: showup 7s infinite;
+.card-custom {
+  transition: all .4s;
+  &:hover {
+    transform: scale(1.03);
   }
-
-  .title-1:last-of-type {
-    width:0px;
-    animation: reveal 7s infinite;
-  }
-
-  .title-2:last-of-type  {
-    font-size:1px;
-    animation: slidein 7s infinite;
-  }
-
-}
-
-@keyframes showup {
-  0% {opacity:0;}
-  20% {opacity:1;}
-  80% {opacity:1;}
-  100% {opacity:0;}
-}
-
-@keyframes slidein {
-  0% { opacity:0; font-size:30px; }
-  20% { opacity:1; font-size:30px;}
-  80% { opacity:1; font-size:50px;}
-  100% { opacity:0; font-size:50px;}
-}
-
-@keyframes reveal {
-  0% {opacity:0;width:0px;}
-  20% {opacity:1;width:0px;}
-  30% {width:355px;}
-  80% {opacity:1;}
-  100% {opacity:0;width:355px;}
 }
 

@@ -11,6 +11,7 @@ import { LivrosComponent } from './components/livros/livros.component';
 import { ProjetosComponent } from './components/projetos/projetos.component';
 import { SobreComponent } from './components/sobre/sobre.component';
 import { SiteRoutingModule } from './site-routing.module';
+import { MatDividerModule } from '@angular/material/divider';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { SiteRoutingModule } from './site-routing.module';
     MatCardModule,
     MatButtonModule,
     FlexLayoutModule,
+    MatDividerModule,
   ]
 })
 export class SiteModule { }

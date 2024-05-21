@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app-component/app.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 
 
@@ -21,11 +22,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     SharedModule,
     FlexLayoutModule,
   ],
-  bootstrap: [
-    AppComponent,
-  ],
+  bootstrap: [AppComponent],
   providers: [
-    RouterOutlet,
+    provideClientHydration(),
+    provideHttpClient(withFetch())
   ],
 
 })
