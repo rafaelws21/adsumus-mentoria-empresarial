@@ -81,7 +81,7 @@ body {
   padding: 20px;
   text-align: center;
   overflow: hidden;
-  white-space: nowrap;
+  white-space: break-spaces;
 
   .title-1:first-of-type {
     animation: showup 7s infinite;
@@ -97,6 +97,10 @@ body {
     animation: slidein 7s infinite;
   }
 
+}
+
+.text-color-primary {
+  color: #4586ff;
 }
 
 

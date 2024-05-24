@@ -12,6 +12,7 @@ import { ProjetosComponent } from './components/projetos/projetos.component';
 import { SobreComponent } from './components/sobre/sobre.component';
 import { SiteRoutingModule } from './site-routing.module';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatButtonModule,
     FlexLayoutModule,
     MatDividerModule,
+    MatExpansionModule,
   ]
 })
 export class SiteModule { }
