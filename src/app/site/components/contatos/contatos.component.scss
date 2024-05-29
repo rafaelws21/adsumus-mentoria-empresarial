@@ -1,0 +1,27 @@
+@import '../../../../assets/animations';
+
+.title-sobre-2 {
+  font-size: 50px;
+}
+
+@include animation-slide-to-left {
+  .to-left {
+    @extend .animation-slide-to-left;
+  }
+}
+@include animation-slide-to-right {
+  .to-right {
+    @extend .animation-slide-to-right;
+  }
+}
+
+.title-card-sobre {
+ color: #4586ff;
+}
+.config-padding-top {
+  padding-top: 10px;
+}
+.img-config {
+  width: 100%;
+  max-height: 280px;
+}

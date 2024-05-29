@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  listaMenu = [
+    {label: 'Home', path: '/'},
+    {label: 'Sobre Nós', path: '/sobre'},
+    {label: 'Projetos', path: '/projetos'},
+    {label: 'Livros Autorais', path: '/livros'},
+    {label: 'Artigos', path: '/artigos'},
+    {label: 'Contatos', path: '/contatos'},
+  ];
+
+
 }

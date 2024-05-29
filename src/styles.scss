@@ -49,6 +49,19 @@ body {
 
 }
 
+.config-bg-contato {
+  background-image: url("./assets/img/handshake.jpg");
+  background-color: #cccccc;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(1px);
+  opacity: 0.8;
+  margin-bottom: 10px;
+
+}
+
 .bg-text-sobre {
   color: white;
   font-weight: bold;
@@ -102,5 +115,7 @@ body {
 .text-color-primary {
   color: #4586ff;
 }
+
+
 
 
