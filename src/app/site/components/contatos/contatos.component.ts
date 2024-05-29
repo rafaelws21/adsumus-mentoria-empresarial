@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { hasError } from '../../../shared/utils/functions';
 import { ContatosService } from '../../services/contatos.service';
-import { EmailModel } from '../../models/Email.model';
+import { EmailModel } from '../../models/email.model';
 
 @Component({
   selector: 'app-contatos',

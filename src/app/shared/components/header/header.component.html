@@ -1,6 +1,22 @@
 <header class="mat-elevation-z4" fxLayoutAlign="space-between center">
   <img src="./assets/img/logo_adsumus.png" >
-  <div fxLayout="row wrap" fxLayoutGap="15px">
-      <a mat-button [routerLink]="menu.path"  *ngFor="let menu of listaMenu">{{menu.label}}</a>
-  </div>
+  <ng-container *ngIf="onMobile$ | async; else notOnMobile">
+    <ng-container *ngTemplateOutlet="mobile"></ng-container>
+  </ng-container>
 </header>
+
+<ng-template #notOnMobile>
+  <div fxLayout="row wrap" fxLayoutGap="15px">
+    <a mat-button [routerLink]="menu.path"  *ngFor="let menu of listaMenu">{{menu.label}}</a>
+  </div>
+</ng-template>
+
+<ng-template #mobile>
+  <button color="primary" mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+    Menu
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [routerLink]="menu.path" *ngFor="let menu of listaMenu">{{menu.label}}</button>
+  </mat-menu>
+</ng-template>

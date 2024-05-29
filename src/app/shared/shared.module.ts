@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { MatIconModule } from '@angular/material/icon';
     RouterModule,
     MatButtonModule,
     MatIconModule,
+    MatMenuModule,
   ]
 })
 export class SharedModule { }

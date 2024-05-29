@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, take } from 'rxjs';
-import { EmailModel } from '../models/Email.model';
+import { EmailModel } from '../models/email.model';
 
 @Injectable({
   providedIn: 'root'

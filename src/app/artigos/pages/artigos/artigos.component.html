@@ -1,7 +1,11 @@
-<div class="content" flexLayout="row wrap" fxLayoutAlign="center start"  fxLayoutGap="15px">
+<div
+  class="content"
+  fxLayout="row wrap"
+  fxLayoutAlign="center center"
+  fxLayoutGap="15px"
+>
   <mat-card
     class="config-custom-card"
-    fxFlex="10"
     matRipple
     matRippleColor="#12559b3d"
     *ngFor="let sub of listaSubMenu" (click)="sub.path()">
@@ -10,6 +14,6 @@
     </mat-card-content>
   </mat-card>
 </div>
-<div class="config-artigos" flexLayout="row"  fxLayoutAlign="center start">
+<div class="config-artigos"  fxLayout="column" fxLayoutAlign="start stretch">
   <router-outlet></router-outlet>
 </div>
