@@ -1,6 +1,8 @@
 @import './assets/boxes';
 @import './assets/animations';
 
+$color_primary: #4586ff;
+
 body,
 html {
   padding: 0;
@@ -112,9 +114,21 @@ body {
   }
 
 }
+a {
+  color: $color_primary;
+  text-decoration: none;
+}
+
+hr {
+  border-width: 0.9px;
+}
 
 .text-color-primary {
-  color: #4586ff;
+  color: $color_primary;
+}
+
+mat-card{
+  background: white;
 }
 
 

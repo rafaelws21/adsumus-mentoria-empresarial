@@ -1,11 +1,14 @@
 .padding-top-10 {
   padding-top: 10px;
 }
+img{
+  height: 200px;
+}
 
 .m-t-10 {
   margin-top: 10px;
   transition: all .4s;
   &:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
   }
 }

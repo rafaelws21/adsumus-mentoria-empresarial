@@ -1,1 +1,422 @@
-<p>questionario works!</p>
+
+<div class="content" fxFlex  fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px">
+  <mat-card>
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <h2 class="title-card-sobre">TESTE DE MATURIDADE</h2>
+    </div>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <mat-vertical-stepper [linear]="!(onMobile$ | async)" #stepper animationDuration="1000">
+        <mat-step [stepControl]="pergunta1">
+          <form [formGroup]="pergunta1">
+            <ng-template matStepLabel>Você considera que costuma ser menos egoísta e mais consciente das necessidades e sentimentos dos outros?</ng-template>
+            <mat-radio-group formControlName="resposta" aria-label="Selecione a opção" >
+              <mat-radio-button [value]="1">Não, raramente</mat-radio-button>
+              <mat-radio-button [value]="2">Às vezes</mat-radio-button>
+              <mat-radio-button [value]="3">Sim, na maioria das vezes</mat-radio-button>
+            </mat-radio-group>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+              <button mat-raised-button color="primary" matStepperNext>Próximo</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="pergunta2">
+          <form [formGroup]="pergunta2">
+            <ng-template matStepLabel>Como você lida com a espera e o trabalho para alcançar seus objetivos?</ng-template>
+            <mat-radio-group formControlName="resposta" aria-label="Selecione a opção" >
+              <mat-radio-button [value]="1">Prefiro resultados imediatos</mat-radio-button>
+              <mat-radio-button [value]="2">Às vezes tenho dificuldade em ser paciente</mat-radio-button>
+              <mat-radio-button [value]="3">Estou disposto a esperar e trabalhar pela maioria dos meus objetivos</mat-radio-button>
+            </mat-radio-group>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+              <button mat-raised-button matStepperPrevious>Voltar</button>
+              <button mat-raised-button color="primary" matStepperNext>Próximo</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="pergunta3">
+          <form [formGroup]="pergunta3">
+            <ng-template matStepLabel>Você acredita que consegue analisar situações e comportamentos de forma objetiva e imparcial?</ng-template>
+            <mat-radio-group formControlName="resposta" aria-label="Selecione a opção" >
+              <mat-radio-button [value]="1">Não, costumo tomar decisões precipitadas</mat-radio-button>
+              <mat-radio-button [value]="2">Às vezes tenho dificuldade em ser imparcial</mat-radio-button>
+              <mat-radio-button [value]="3">Sim, geralmente busco entender diferentes perspectivas antes de tomar decisões</mat-radio-button>
+            </mat-radio-group>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+              <button mat-raised-button matStepperPrevious>Voltar</button>
+              <button mat-raised-button color="primary" matStepperNext>Próximo</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="pergunta4">
+          <form [formGroup]="pergunta4">
+            <ng-template matStepLabel>Como você lida com frustrações e contrariedades?</ng-template>
+            <mat-radio-group formControlName="resposta" aria-label="Selecione a opção" >
+              <mat-radio-button [value]="1">Geralmente reajo de forma exagerada e irracional</mat-radio-button>
+              <mat-radio-button [value]="2">Tenho dificuldade em controlar minhas reações emocionais</mat-radio-button>
+              <mat-radio-button [value]="3">Consigo lidar de forma racional e equilibrada</mat-radio-button>
+            </mat-radio-group>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+              <button mat-raised-button matStepperPrevious>Voltar</button>
+              <button mat-raised-button color="primary" matStepperNext>Próximo</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="pergunta5">
+          <form [formGroup]="pergunta5">
+            <ng-template matStepLabel>Você costuma ser paciente ao esperar por resultados ou conquistas?</ng-template>
+            <mat-radio-group formControlName="resposta" aria-label="Selecione a opção" >
+              <mat-radio-button [value]="1">Prefiro resultados imediatos e tenho dificuldade em esperar</mat-radio-button>
+              <mat-radio-button [value]="2">Às vezes tenho dificuldade em ser paciente</mat-radio-button>
+              <mat-radio-button [value]="3">Sim, consigo esperar e trabalhar para alcançar meus objetivos </mat-radio-button>
+            </mat-radio-group>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+              <button mat-raised-button matStepperPrevious>Voltar</button>
+              <button mat-raised-button color="primary" matStepperNext>Próximo</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="pergunta6">
+          <form [formGroup]="pergunta6">
+            <ng-template matStepLabel>Como você se expressa em situações difíceis ou conflitantes?</ng-template>
+            <mat-radio-group formControlName="resposta" aria-label="Selecione a opção" >
+              <mat-radio-button [value]="1">Costumo evitar confrontos e me esquivar de situações desafiadoras.</mat-radio-button>
+              <mat-radio-button [value]="2">Tenho dificuldade em expressar minhas opiniões de forma assertiva</mat-radio-button>
+              <mat-radio-button [value]="3">Consigo comunicar minhas necessidades de forma clara e direta</mat-radio-button>
+            </mat-radio-group>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+              <button mat-raised-button matStepperPrevious>Voltar</button>
+              <button mat-raised-button color="primary" matStepperNext>Próximo</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="pergunta7">
+          <form [formGroup]="pergunta7">
+            <ng-template matStepLabel>Como você costuma administrar suas finanças?</ng-template>
+            <mat-radio-group formControlName="resposta" aria-label="Selecione a opção" >
+              <mat-radio-button [value]="1">Costumo gastar impulsivamente e tenho dificuldade em economizar</mat-radio-button>
+              <mat-radio-button [value]="2">Às vezes tenho dificuldade em controlar meus gastos</mat-radio-button>
+              <mat-radio-button [value]="3">Eu faço um planejamento financeiro e evito gastos desnecessários</mat-radio-button>
+            </mat-radio-group>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+              <button mat-raised-button matStepperPrevious>Voltar</button>
+              <button mat-raised-button color="primary" matStepperNext>Próximo</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="pergunta8">
+          <form [formGroup]="pergunta8">
+            <ng-template matStepLabel>Quando alguém compartilha um segredo com você, como costuma lidar com essa informação?</ng-template>
+            <mat-radio-group formControlName="resposta" aria-label="Selecione a opção" >
+              <mat-radio-button [value]="1">Tenho tendência a compartilhar informações confidenciais sem considerar a origem da fonte.</mat-radio-button>
+              <mat-radio-button [value]="2">Às vezes tenho dificuldade em manter segredos</mat-radio-button>
+              <mat-radio-button [value]="3">Respeito a confidencialidade e não compartilho a informação sem permissão</mat-radio-button>
+            </mat-radio-group>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+              <button mat-raised-button matStepperPrevious>Voltar</button>
+              <button mat-raised-button color="primary" matStepperNext>Próximo</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="pergunta9">
+          <form [formGroup]="pergunta9">
+            <ng-template matStepLabel>Como você costuma abordar novas ideias ou perspectivas que contradizem suas crenças ou opiniões preestabelecidas?</ng-template>
+            <mat-radio-group formControlName="resposta" aria-label="Selecione a opção" >
+              <mat-radio-button [value]="1">Tendo a ser inflexível e resistente a mudanças em meu entendimento de determinados assuntos   </mat-radio-button>
+              <mat-radio-button [value]="2">Tenho dificuldade em aceitar opiniões que discordam das minhas crenças</mat-radio-button>
+              <mat-radio-button [value]="3">Estou aberto a considerar diferentes pontos de vista e avaliar novas informações de forma imparcial</mat-radio-button>
+            </mat-radio-group>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+              <button mat-raised-button matStepperPrevious>Voltar</button>
+              <button mat-raised-button color="primary" matStepperNext>Próximo</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="pergunta10">
+          <form [formGroup]="pergunta10">
+            <ng-template matStepLabel>Como você costuma se comunicar em situações que exigem clareza e concisão?</ng-template>
+            <mat-radio-group formControlName="resposta" aria-label="Selecione a opção" >
+              <mat-radio-button [value]="1">Tendo a ser prolixo e me perco em detalhes irrelevantes ao comunicar minhas ideias</mat-radio-button>
+              <mat-radio-button [value]="2">Às vezes tenho dificuldade em comunicar de forma sucinta</mat-radio-button>
+              <mat-radio-button [value]="3">Consigo expressar minhas ideias de forma clara e direta, evitando excessos de informação</mat-radio-button>
+            </mat-radio-group>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+              <button mat-raised-button matStepperPrevious>Voltar</button>
+              <button mat-raised-button color="primary" matStepperNext>Próximo</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="pergunta11">
+          <form [formGroup]="pergunta11">
+            <ng-template matStepLabel>Como você se considera em relação à pontualidade e cumprimento de prazos estabelecidos?</ng-template>
+            <mat-radio-group formControlName="resposta" aria-label="Selecione a opção" >
+              <mat-radio-button [value]="1">Costumo desconsiderar prazos e horários, e tenho dificuldade em ser pontual</mat-radio-button>
+              <mat-radio-button [value]="2">Às vezes tenho dificuldade em cumprir prazos e horários estabelecidos</mat-radio-button>
+              <mat-radio-button [value]="3">Sou disciplinado e valorizo a pontualidade tanto no cumprimento de compromissos quanto no respeito ao tempo alheio</mat-radio-button>
+            </mat-radio-group>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+              <button mat-raised-button matStepperPrevious>Voltar</button>
+              <button mat-raised-button color="primary" matStepperNext>Próximo</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="pergunta12">
+          <form [formGroup]="pergunta12">
+            <ng-template matStepLabel>Como você aborda a confiança e transparência em seus relacionamentos interpessoais?</ng-template>
+            <mat-radio-group formControlName="resposta" aria-label="Selecione a opção" >
+              <mat-radio-button [value]="1">Como você aborda a confiança e transparência em seus relacionamentos interpessoais?</mat-radio-button>
+              <mat-radio-button [value]="2">Às vezes tenho dificuldade em confiar nas outras pessoas e em me abrir emocionalmente</mat-radio-button>
+              <mat-radio-button [value]="3">Valorizo a lealdade e transparência e busco construir relações baseadas na confiança mútua</mat-radio-button>
+            </mat-radio-group>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+              <button mat-raised-button matStepperPrevious>Voltar</button>
+              <button mat-raised-button color="primary" matStepperNext>Próximo</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="pergunta13">
+          <form [formGroup]="pergunta13">
+            <ng-template matStepLabel>Como você costuma se comportar ao ouvir as opiniões e perspectivas dos outros?</ng-template>
+            <mat-radio-group formControlName="resposta" aria-label="Selecione a opção" >
+              <mat-radio-button [value]="1">Tendo a ser impaciente ao ouvir as opiniões dos outros e costumo interromper frequentemente</mat-radio-button>
+              <mat-radio-button [value]="2">Às vezes tenho dificuldade em ouvir pacientemente e acabo interrompendo</mat-radio-button>
+              <mat-radio-button [value]="3">Procuro ouvir atentamente, sem interromper, e valorizo a diversidade de opiniões</mat-radio-button>
+            </mat-radio-group>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+              <button mat-raised-button matStepperPrevious>Voltar</button>
+              <button mat-raised-button color="primary" matStepperNext>Próximo</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="pergunta14">
+          <form [formGroup]="pergunta14">
+            <ng-template matStepLabel>Como você costuma reagir diante de situações de pressão e adversidade?</ng-template>
+            <mat-radio-group formControlName="resposta" aria-label="Selecione a opção" >
+              <mat-radio-button [value]="1">Tendo a me sentir sobrecarregado e incapaz de resolver problemas em situações de pressão</mat-radio-button>
+              <mat-radio-button [value]="2">Tenho dificuldade em lidar com pressões e costumo reagir de forma impulsiva e descontrolada</mat-radio-button>
+              <mat-radio-button [value]="3">Consigo manter a calma e buscar soluções práticas e eficientes em momentos de pressão</mat-radio-button>
+            </mat-radio-group>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+              <button mat-raised-button matStepperPrevious>Voltar</button>
+              <button mat-raised-button color="primary" matStepperNext>Próximo</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="pergunta15">
+          <form [formGroup]="pergunta15">
+            <ng-template matStepLabel>Como você toma decisões sobre quais atividades ou oportunidades são prioridades em sua vida?</ng-template>
+            <mat-radio-group formControlName="resposta" aria-label="Selecione a opção" >
+              <mat-radio-button [value]="1">Costumo me dispersar em questões secundárias e tenho dificuldade em focar no que é realmente importante</mat-radio-button>
+              <mat-radio-button [value]="2">Às vezes tenho dificuldade em reconhecer o que é prioritário e acabo dispersando minha atenção</mat-radio-button>
+              <mat-radio-button [value]="3">Consigo renunciar a questões secundárias em prol de meus objetivos principais e de longo prazo</mat-radio-button>
+            </mat-radio-group>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+              <button mat-raised-button matStepperPrevious>Voltar</button>
+              <button mat-raised-button color="primary" matStepperNext>Próximo</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="pergunta16">
+          <form [formGroup]="pergunta16">
+            <ng-template matStepLabel>Como você encara a ideia de abrir mão de certas oportunidades em prol de um objetivo de longo prazo?</ng-template>
+            <mat-radio-group formControlName="resposta" aria-label="Selecione a opção" >
+              <mat-radio-button [value]="1">Tenho dificuldade em renunciar a oportunidades que possam desviar minha atenção do presente</mat-radio-button>
+              <mat-radio-button [value]="2">Às vezes tenho dificuldade em abrir mão de oportunidades imediatas e me distraio facilmente</mat-radio-button>
+              <mat-radio-button [value]="3">Estou disposto a sacrificar oportunidades de curto prazo em favor de metas de longo prazo</mat-radio-button>
+            </mat-radio-group>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+              <button mat-raised-button matStepperPrevious>Voltar</button>
+              <button mat-raised-button color="primary" matStepperNext>Próximo</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="pergunta17">
+          <form [formGroup]="pergunta17">
+            <ng-template matStepLabel>Como você reage diante de situações de rejeição ou negativas em sua vida pessoal ou profissional?</ng-template>
+            <mat-radio-group formControlName="resposta" aria-label="Selecione a opção" >
+              <mat-radio-button [value]="1">Tendo a reagir de forma impulsiva e emocional diante de situações de rejeição ou negativas  </mat-radio-button>
+              <mat-radio-button [value]="2">Tenho dificuldade em lidar com rejeições e negativas e costumo me abalar emocionalmente</mat-radio-button>
+              <mat-radio-button [value]="3">Consigo lidar de forma madura e respeitosa, buscando aprender com as situações</mat-radio-button>
+            </mat-radio-group>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+              <button mat-raised-button matStepperPrevious>Voltar</button>
+              <button mat-raised-button color="primary" matStepperNext>Próximo</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="pergunta18">
+          <form [formGroup]="pergunta18">
+            <ng-template matStepLabel>Como você costuma reagir quando se depara com situações que geram indignação ou insatisfação em sua vida pessoal ou profissional?</ng-template>
+            <mat-radio-group formControlName="resposta" aria-label="Selecione a opção" >
+              <mat-radio-button [value]="1">Tendo a ficar paralisado ou desmotivado diante de situações que me causam indignação</mat-radio-button>
+              <mat-radio-button [value]="2">Tenho dificuldade em transformar a indignação em impulso para alcançar novos resultados</mat-radio-button>
+              <mat-radio-button [value]="3">Consigo utilizar essa indignação como motivação extra para buscar novas soluções ou alcançar melhores resultados </mat-radio-button>
+            </mat-radio-group>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+              <button mat-raised-button matStepperPrevious>Voltar</button>
+              <button mat-raised-button color="primary" matStepperNext>Próximo</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="pergunta19">
+          <form [formGroup]="pergunta19">
+            <ng-template matStepLabel>Como você costuma lidar com conflitos ou desentendimentos interpessoais?</ng-template>
+            <mat-radio-group formControlName="resposta" aria-label="Selecione a opção" >
+              <mat-radio-button [value]="1">Tendo a guardar ressentimentos e evitar pedir perdão ou perdoar quando necessário, o que acaba afetando minhas relações</mat-radio-button>
+              <mat-radio-button [value]="2">Tenho dificuldade em pedir perdão ou perdoar, e isso geralmente impacta negativamente minhas relações</mat-radio-button>
+              <mat-radio-button [value]="3">Estou disposto a pedir perdão quando erro e a perdoar aqueles que me magoam, buscando a reconciliação </mat-radio-button>
+            </mat-radio-group>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+              <button mat-raised-button matStepperPrevious>Voltar</button>
+              <button mat-raised-button color="primary" matStepperNext>Próximo</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="pergunta20">
+          <form [formGroup]="pergunta20">
+            <ng-template matStepLabel>Como você costuma lidar com situações em que comete um erro ou falha?</ng-template>
+            <mat-radio-group formControlName="resposta" aria-label="Selecione a opção" >
+              <mat-radio-button [value]="1">Tendo a evitar assumir a responsabilidade por meus erros, culpando os outros ou as circunstâncias</mat-radio-button>
+              <mat-radio-button [value]="2">Tenho dificuldade em assumir a responsabilidade por meus erros e costumo buscar justificativas externas</mat-radio-button>
+              <mat-radio-button [value]="3">Assumo a responsabilidade pelos meus atos, reconheço os erros e busco corrigi-los, se necessário </mat-radio-button>
+            </mat-radio-group>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+              <button mat-raised-button matStepperPrevious>Voltar</button>
+              <button mat-raised-button color="primary" matStepperNext>Próximo</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="pergunta21">
+          <form [formGroup]="pergunta21">
+            <ng-template matStepLabel>Como você costuma enfrentar situações de perda e dor emocional em sua vida?</ng-template>
+            <mat-radio-group formControlName="resposta" aria-label="Selecione a opção" >
+              <mat-radio-button [value]="1">Tendo a evitar enfrentar a dor emocional e busco formas prejudiciais de lidar com a situação</mat-radio-button>
+              <mat-radio-button [value]="2">Tenho dificuldade em lidar com emocionalmente situações de perda e costumo me sentir sobrecarregado(1) pela dor</mat-radio-button>
+              <mat-radio-button [value]="3">Busco apoio emocional e encontro maneiras saudáveis de lidar com a dor, permitindo-me processar as emoções</mat-radio-button>
+            </mat-radio-group>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+              <button mat-raised-button matStepperPrevious>Voltar</button>
+              <button mat-raised-button color="primary" matStepperNext>Próximo</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="pergunta22">
+          <form [formGroup]="pergunta22">
+            <ng-template matStepLabel>Como você costuma lidar com desafetos ou ex-relacionamentos em sua vida?</ng-template>
+            <mat-radio-group formControlName="resposta" aria-label="Selecione a opção" >
+              <mat-radio-button [value]="1">Tendo a guardar ressentimentos e prolongar conflitos, o que afeta minhas relações e bem-estar emocional</mat-radio-button>
+              <mat-radio-button [value]="2">Tenho dificuldade em lidar com desafetos ou ex-relacionamentos, e isso impacta negativamente minhas relações interpessoais</mat-radio-button>
+              <mat-radio-button [value]="3">Busco manter uma postura madura e respeitosa, procurando solucionar conflitos e seguir em frente de forma saudável</mat-radio-button>
+            </mat-radio-group>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+              <button mat-raised-button matStepperPrevious>Voltar</button>
+              <button mat-raised-button color="primary" matStepperNext>Próximo</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="pergunta23">
+          <form [formGroup]="pergunta23">
+            <ng-template matStepLabel>Como você costuma abordar o planejamento do seu futuro pessoal e profissional?</ng-template>
+            <mat-radio-group formControlName="resposta" aria-label="Selecione a opção" >
+              <mat-radio-button [value]="1">Costumo evitar pensar muito sobre o futuro e tendo a viver o momento presente sem considerar um planejamento a longo prazo.</mat-radio-button>
+              <mat-radio-button [value]="2">Às vezes tenho dificuldade em planejar o futuro e acabo lidando com as situações à medida que surgem</mat-radio-button>
+              <mat-radio-button [value]="3">Procuro estabelecer metas claras e um plano de ação para alcançá-las, levando em consideração diversos aspectos da minha vida</mat-radio-button>
+            </mat-radio-group>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+              <button mat-raised-button matStepperPrevious>Voltar</button>
+              <button mat-raised-button color="primary" matStepperNext>Próximo</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="pergunta24">
+          <form [formGroup]="pergunta24">
+            <ng-template matStepLabel>Como você descreveria a qualidade do seu relacionamento com seus pais ou responsáveis?</ng-template>
+            <mat-radio-group formControlName="resposta" aria-label="Selecione a opção" >
+              <mat-radio-button [value]="1">Tenho dificuldade em manter um relacionamento saudável com meus pais, o que acaba impactando outras áreas da minha vida</mat-radio-button>
+              <mat-radio-button [value]="2">Às vezes enfrento desafios na comunicação e compreensão com meus pais, mas procuramos resolver as divergências de forma respeitosa</mat-radio-button>
+              <mat-radio-button [value]="3">Tenho um relacionamento próximo e saudável, baseado em comunicação aberta e apoio mútuo</mat-radio-button>
+            </mat-radio-group>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+              <button mat-raised-button matStepperPrevious>Voltar</button>
+              <button mat-raised-button color="primary" matStepperNext>Próximo</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="pergunta25">
+          <form [formGroup]="pergunta25">
+            <ng-template matStepLabel>Como você se comporta ao lidar com situações de conflito interpessoal?</ng-template>
+            <mat-radio-group formControlName="resposta" aria-label="Selecione a opção" >
+              <mat-radio-button [value]="1">Tendo a evitar confrontar situações de conflito, o que pode levar a um acúmulo de ressentimentos e tensões não resolvidas.</mat-radio-button>
+              <mat-radio-button [value]="2">Às vezes tenho dificuldade em lidar com conflitos e posso acabar evitando confrontações ou reagindo de forma impulsiva</mat-radio-button>
+              <mat-radio-button [value]="3">Procuro abordar os conflitos de maneira diplomática, ouvindo todas as partes e buscando soluções que levem em consideração as necessidades de todos os envolvidos</mat-radio-button>
+            </mat-radio-group>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+              <button mat-raised-button matStepperPrevious>Voltar</button>
+              <button mat-raised-button color="primary" (click)="calcular(stepper)">Calcular</button>
+            </div>
+          </form>
+        </mat-step>
+
+      </mat-vertical-stepper>
+    </mat-card-content>
+  </mat-card>
+  <mat-card *ngIf="resultado > 0">
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <h2 class="title-card-sobre">RESULTADO</h2>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <span>Quantidade de respostas nº1 = {{respValor1}}</span>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <span>Quantidade de respostas nº2 = {{respValor2}}</span>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <span>Quantidade de respostas nº3 = {{respValor3}}</span>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <h1>{{resultado}}</h1>
+    </div>
+    <div>
+      <table mat-table [dataSource]="listaResultado" class="mat-elevation-z8">
+        <ng-container matColumnDef="pontos">
+          <th mat-header-cell *matHeaderCellDef> Total de Pontos </th>
+          <td mat-cell *matCellDef="let element"> {{element.pontos}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="classificacao">
+          <th mat-header-cell *matHeaderCellDef> Classificação </th>
+          <td mat-cell *matCellDef="let element"> {{element.classificacao}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </mat-card>
+</div>
+
+

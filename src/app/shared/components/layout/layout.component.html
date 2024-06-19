@@ -1,5 +1,7 @@
-<app-header class="sticky-header" flexLayout="column"></app-header>
-<div flexLayout="row" fxFlex>
-  <router-outlet></router-outlet>
+<div class="height" fxLayout="column" fxLayoutAlign="start stretch" >
+  <app-header class="sticky-header" flexLayout="column"></app-header>
+  <div flexLayout="row" fxFlex>
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer class="sticky-footer" flexLayout="column"></app-footer>
 </div>
-<app-footer class="sticky-footer" flexLayout="column"></app-footer>

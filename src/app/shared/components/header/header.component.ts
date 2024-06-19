@@ -17,6 +17,7 @@ export class HeaderComponent implements OnInit {
     {label: 'Projetos', path: '/projetos'},
     {label: 'Livros Autorais', path: '/livros'},
     {label: 'Artigos', path: '/artigos'},
+    {label: 'Teste de Maturidade', path: '/questionario'},
     {label: 'Contatos', path: '/contatos'},
   ];
 
