@@ -1,17 +1,23 @@
 <div
   class="content"
   fxLayout="row wrap"
-  fxLayoutAlign="center center"
+  fxLayoutAlign="center start"
   fxLayoutGap="15px"
 >
   <mat-card
+    fxFlex="33"
     class="config-custom-card"
-    matRipple
-    matRippleColor="#12559b3d"
-    *ngFor="let sub of listaSubMenu" (click)="sub.path()">
-    <mat-card-content class="content-card"  fxLayout="row" fxLayoutAlign="center center">
-      <div>{{sub.label}}</div>
+    *ngFor="let sub of listaSubMenu">
+    <mat-card-header>
+      <mat-card-title>{{sub.label}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="sub.imgPath" [alt]="sub.descricao">
+    <mat-card-content class="content-card">
+      {{sub.descricao}}
     </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-button color="accent" (click)="sub.path()">LEIA +</button>
+    </mat-card-actions>
   </mat-card>
 </div>
 <div class="config-artigos"  fxLayout="column" fxLayoutAlign="start stretch">

@@ -2,25 +2,22 @@
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
-  cursor: pointer;
-  font-weight: bold;
-  min-width: 150px;
-  max-width: 160px;
+
   margin-bottom: 15px;
 
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
-  &:hover {
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    background-color: #a8afb63d;
-    color: #212222;
-  }
+
   p {
     margin-bottom: 5px;
   }
 
   .content-card {
-    min-height: 150px;
+   padding-top: 15px;
   }
+}
+
+img {
+  height: 400px;
 }
 
 .config-artigos {

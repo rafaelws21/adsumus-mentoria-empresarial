@@ -11,33 +11,31 @@ const routes: Routes = [
   {
     path: '',
     component: ArtigosComponent,
-    children: [
-      {
-        path:'lideranca-sobre-prisma',
-        component: LiderancaSobrePrismaComponent,
-      },
-      {
-        path:'gratidao',
-        component: GratidaoComponent,
-      },
-      {
-        path:'filosofia-base-conhecimento',
-        component: FilosofiaBaseConhecimentoComponent,
-      },
-      {
-        path:'motivacao-sucesso-profissional',
-        component: MotivacaoHunterFilosofiaComponent,
-      },
-      {
-        path:'como-se-libertar',
-        component: ComoSeLibertarComponent,
-      }
-    ]
-  }
+  },
+  {
+    path: 'lideranca-sobre-prisma',
+    component: LiderancaSobrePrismaComponent,
+  },
+  {
+    path: 'gratidao',
+    component: GratidaoComponent,
+  },
+  {
+    path: 'filosofia-base-conhecimento',
+    component: FilosofiaBaseConhecimentoComponent,
+  },
+  {
+    path: 'motivacao-sucesso-profissional',
+    component: MotivacaoHunterFilosofiaComponent,
+  },
+  {
+    path: 'como-se-libertar',
+    component: ComoSeLibertarComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class ArtigosRoutingModule { }
+export class ArtigosRoutingModule {}
