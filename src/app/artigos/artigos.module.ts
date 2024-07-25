@@ -13,6 +13,7 @@ import { GratidaoComponent } from './components/gratidao/gratidao.component';
 import { LiderancaSobrePrismaComponent } from './components/lideranca-sobre-prisma/lideranca-sobre-prisma.component';
 import { MotivacaoHunterFilosofiaComponent } from './components/motivacao-hunter-filosofia/motivacao-hunter-filosofia.component';
 import { ArtigosComponent } from './pages/artigos/artigos.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { ArtigosComponent } from './pages/artigos/artigos.component';
     MatRippleModule,
     MatDividerModule,
     MatButtonModule,
+    MatDialogModule,
   ]
 })
 export class ArtigosModule { }

@@ -1,15 +1,19 @@
 <div
   class="content"
   fxLayout="row wrap"
-  fxLayoutAlign="center start"
+  fxLayout.lt-sm="column"
+  fxLayoutAlign="center stretch"
   fxLayoutGap="15px"
 >
   <mat-card
     fxFlex="33"
+    fxFlex.lt-sm="100"
     class="config-custom-card"
     *ngFor="let sub of listaSubMenu">
     <mat-card-header>
-      <mat-card-title>{{sub.label}}</mat-card-title>
+      <mat-card-subtitle class="padding-config">
+        <strong>{{sub.label}}</strong>
+      </mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image [src]="sub.imgPath" [alt]="sub.descricao">
     <mat-card-content class="content-card">

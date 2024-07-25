@@ -12,26 +12,6 @@ const routes: Routes = [
     path: '',
     component: ArtigosComponent,
   },
-  {
-    path: 'lideranca-sobre-prisma',
-    component: LiderancaSobrePrismaComponent,
-  },
-  {
-    path: 'gratidao',
-    component: GratidaoComponent,
-  },
-  {
-    path: 'filosofia-base-conhecimento',
-    component: FilosofiaBaseConhecimentoComponent,
-  },
-  {
-    path: 'motivacao-sucesso-profissional',
-    component: MotivacaoHunterFilosofiaComponent,
-  },
-  {
-    path: 'como-se-libertar',
-    component: ComoSeLibertarComponent,
-  },
 ];
 
 @NgModule({
